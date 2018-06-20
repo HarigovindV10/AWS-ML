@@ -11,7 +11,7 @@ response = client.detect_text(
 result=""
 
 
-for i in response['TextDetections']:
-    if i["Type"]=='LINE':
-        result+=" "+i['DetectedText']
+for words in response['TextDetections']:
+    if words["Type"]=='WORD':
+        result+=" "+words['DetectedText']
 print(result)

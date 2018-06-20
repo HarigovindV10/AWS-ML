@@ -16,7 +16,7 @@ awscli
 
 ```pip install awscli```
 
-Kivy [Installing kivy]https://kivy.org/docs/installation/installation.html
+Kivy [Installing kivy](https://kivy.org/docs/installation/installation.html)
 
 ### Running
 

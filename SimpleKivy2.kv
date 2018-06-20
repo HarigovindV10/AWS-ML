@@ -1,0 +1,57 @@
+ScreenManagement:
+    #transition: FadeTransition()
+    MainScreen:
+    FileSelectScreen:
+	ReadyToAnalyseScreen:
+	AnalysisScreen:
+
+<MainScreen>:
+	name: 'main'
+    Button:
+		size_hint: 0.2,0.1
+        pos: ((root.x+root.right)/2)-(self.width/2), ((root.top + root.y)/2)-(self.height/2)
+        text: "Choose File"
+		on_release: app.root.current = 'fileselect'
+
+
+<FileSelectScreen>
+	name: 'fileselect'
+	id: my_widget
+	FileChooserIconView:
+        id: filechooser
+        path: "C:\\Users\\ahamed.sinan\\Downloads"
+        on_selection:
+            root.test(filechooser.path, filechooser.selection)
+            root.process(str(filechooser.selection[0])) if len(filechooser.selection) > 0 else False
+            #root.nfiles = root.nfiles + 1
+            #app.root.current = 'readytoanalyse'
+<ReadyToAnalyseScreen>
+	name: 'readytoanalyse'
+	id: readytoanalyse
+    Image:
+        id: anaimage
+        source: root.img_source
+    Button:
+		size_hint: 0.2, 0.1
+		pos_hint: {'right': 1, 'y':0}
+		text: "Analyze"
+		on_release:
+			root.manager.get_screen('analysis').ids.f1.text= readytoanalyse.ana(root.img_source)
+			app.root.current = 'analysis'
+    Button:
+		size_hint: 0.2,0.1
+        pos_hint: {"x": 0, 'y': 0}
+        text: "Choose File"
+		on_release: app.root.current = 'fileselect'
+<AnalysisScreen>
+	name: 'analysis'
+	TextInput:
+		id: f1
+        size_hint: 1,0.7
+        pos_hint:{"x":0 ,"top":1}
+		text: 'hi'
+	Button:
+		pos_hint:{"x": 0.4,"y":0.1}
+		size_hint: 0.2,0.1
+        text:'Try Again'
+		on_release: app.root.current = 'main'

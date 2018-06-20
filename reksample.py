@@ -8,10 +8,10 @@ response = client.detect_text(
         'Bytes': source_bytes
     }
 )
-s=""
+result=""
 
 
 for i in response['TextDetections']:
     if i["Type"]=='LINE':
-        s+=" "+i['DetectedText']
-print(s)
+        result+=" "+i['DetectedText']
+print(result)

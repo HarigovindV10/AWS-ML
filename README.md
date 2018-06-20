@@ -10,21 +10,22 @@ You will need an AWS Access Key ID and AWS Secret Access Key [To get the access 
 ### Installation
 Boto3
 
-'''pip install boto3''
+```pip install boto3```
 
 awscli
 
-'''pip install awscli'''
+```pip install awscli```
 
 ### Running
 
 In the Terminal (MacOS/Linux) or Command Prompt (Windows) run
 
-'''$ aws configure
+```$ aws configure
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 Default region name [None]: us-west-2
-Default output format [None]: json'''
+Default output format [None]: json
+```
 
 enter your AWS Access Key ID ,AWS Secret Access Key,Location and Output Format when prompted.
 

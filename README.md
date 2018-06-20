@@ -1,4 +1,4 @@
-# AWS Maching Learning APIs
+# AWS Machine Learning APIs
 AWS Machine Learning Tools and APIs implemented in python using boto3 library.
 Amazon provides various APIS like LEX,POLLY,REKOGINTION
 
@@ -20,7 +20,8 @@ awscli
 
 In the Terminal (MacOS/Linux) or Command Prompt (Windows) run
 
-```$ aws configure
+```
+$ aws configure
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 Default region name [None]: us-west-2
@@ -29,7 +30,6 @@ Default output format [None]: json
 
 enter your AWS Access Key ID ,AWS Secret Access Key,Location and Output Format when prompted.
 
-##Authors
 
 ## Authors
 

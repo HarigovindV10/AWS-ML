@@ -14,7 +14,7 @@ response = client.synthesize_speech(
 
 if "AudioStream" in response:
     with closing(response["AudioStream"]) as stream:
-        output = "polly-boto.mp3"
+        output = "pollyboto.mp3"
 
         try:
             # Open a file for writing the output as a binary stream
@@ -25,4 +25,4 @@ if "AudioStream" in response:
             # Could not write to file, exit gracefully
             print(error)
             sys.exit(-1)
-        os.system("start polly-boto.mp3")
+        os.system("start pollyboto.mp3")

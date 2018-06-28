@@ -10,15 +10,11 @@ You will need an AWS Access Key ID and AWS Secret Access Key [To get the access 
 ### Installation
 boto3
 
-```bash
-pip install boto3
-```
+`pip install boto3`
 
 awscli
 
-```bash
-pip install awscl
-```
+`pip install awscl`
 
 Kivy [Installing kivy](https://kivy.org/docs/installation/installation.html)
 
